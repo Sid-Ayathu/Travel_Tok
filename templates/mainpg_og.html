@@ -1,0 +1,167 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" href="TT.ico">
+    <title>Travel Talk</title>
+    <style>
+        h1
+{
+    display: inline;
+    margin: 0 auto 0 auto;
+}
+p{
+    display: inline;
+    margin: 0 auto 0 auto;
+    position: absolute;
+    left: 0;
+    top:30px;
+    
+}
+body
+{
+    margin: 0;
+    background-color: #C9EEFF;
+}
+.motto
+{
+    width: 20%;
+    display: inline;
+}
+
+h3
+{
+    margin-bottom: 0;
+    display: inline;
+    position: relative;
+    height: 100px;
+    width: 300px;
+    top: 50px;
+    left:350px;
+}
+.profile
+{
+    width: 200px;
+    height: 30px;
+    display: inline-block;
+    position: relative;
+    top: 20px;
+    left:1000px;
+    text-decoration: none;
+}
+.right
+{
+    width: 20%;
+    height:70%;
+    display: inline;
+    position: absolute;
+    right: 0;
+    top: 100px;
+}
+ol
+{
+    background-color: #19A7CE;
+    height: 30%;
+}
+.li-1
+{
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height:20px;
+}
+.li-2
+{
+    height: 20px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.li-3
+{
+    height: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+h2{
+    margin:0 auto 0 auto;
+    position: relative;
+    left: 650px;
+    top:20px;
+    display: inline;
+}
+.img_click
+{
+    position: absolute;
+    left: 50px;
+    top: 200px;
+    height:700px;
+    width:1400px;
+}
+.next-button
+{
+
+    position: absolute;
+    bottom: 50px;
+    right: 200px;
+}
+.like-button
+{
+
+    position: absolute;
+    bottom: 50px;
+    right: 350px;
+}
+    </style>
+</head>
+<body>
+    <!-- <script>
+        var a=JSON.parse("{{ image_url | escapejs }}");
+        var im=document.body.createElement("img");
+        im.src=a;
+        document.body.appendChild(im);
+    </script> -->
+    <img src="{{ img_url }}" alt="error">
+    <div class="motto" >
+        <h1>Travel Talk</h1>
+        <p><em>infusing local culture in tourism</em></p>
+    </div>
+    <div class="nav-bar">
+        <h3>Your Recommendations:</h3>
+        <a class="profile" href="https://colorhunt.co/palette/f6f1f119a7ce146c94000000" >profile</a>
+    </div>
+    <div class="right">
+        <h4>Our Top picks for you:</h4>
+        <ol>
+            <li class="li-1">-</li>
+            <li class="li-2"></li>
+            <li class="li-3"></li>
+        </ol>
+    </div>
+    <h2> // name of place//</h2>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <!-- <tr>
+            <td><button class="next-button" type="button" name="next" value="no"> <td>
+            <td><button class="like-button" type="button" name="like" value="yes"> <td></td>
+        </tr> -->
+        <button type="submit" value="yes" name="yes">Like</button>
+    </form>
+
+   
+
+    
+    
+</body>
+</html>

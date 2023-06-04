@@ -1,0 +1,74 @@
+{% load embed_video_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelTalk</title>
+    
+    <style>
+        .motto{
+            margin:0;
+            display: inline;
+        }
+        .head-name{
+            display: inline;
+            position: absolute;
+            top:0;
+            left:0;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .head-motto{
+            display: inline;
+            position: absolute;
+            top:20px;
+            left:0;
+            margin-bottom: 0;
+            margin-top: 5px;
+        }
+        h1{
+            display: inline;
+            position: absolute;
+            top: 30px;
+            left: 800px;
+        }
+        .next-button{
+            display: inline;
+            position: absolute;
+            right: 2.08%;
+            bottom:37%;
+
+        }
+        .like-button{
+            display: inline;
+            position: absolute;
+            right: 2.08%;
+            bottom:50.92%;
+        }
+        iframe{
+            display: inline;
+            position: absolute;
+            left:10.416%;
+            bottom:9.216%;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="motto" >
+        <p class="head-name">Travel Talk</p>
+        <p class="head-motto" ><em>infusing local culture in tourism</em></p>
+
+    </div>
+    <h1>{{name}}</h1>
+    <form method="post" action="">
+    {% csrf_token %}
+        <input class="like-button" type="submit" name="yes" value="like">
+        <input class="next-button" type="submit" name="no" value="next">
+    </form>
+    <iframe height="500" width="800" src="{{img_url}}"></iframe>
+</body>
+</html>
